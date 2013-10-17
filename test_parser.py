@@ -14,4 +14,6 @@ class ParserTest(TestCase):
                 ],
                 name=Symbol('start')),
             parse(inFile='test_cases/001.rpy'))
+        with self.assertRaises(SyntaxError):
+            parse(inFile='test_cases/002.rpy')
 
